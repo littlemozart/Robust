@@ -4,6 +4,10 @@ buildscript {
     repositories {
         mavenLocal()
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.0'
@@ -28,6 +32,10 @@ allprojects {
             url "http://depot.sankuai.com/nexus/content/groups/public/"
         }
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     tasks.withType(JavaCompile) { options.encoding = "UTF-8" }
 }
